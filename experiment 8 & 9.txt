@@ -1,0 +1,44 @@
+﻿EXPERIMENT 8:
+ 
+1. ODD/EVEN
+#!/bin/bash
+echo "Enter a number:"
+read num
+if [ $((num % 2)) -eq 0 ]
+then
+    echo "$num is Even"
+else
+    echo "$num is Odd"
+fi
+
+OUTPUT:
+
+Enter a number:
+6
+6 is Even
+Enter a number:
+3
+3 is Odd
+
+EXPERIMENT 9:
+
+2. LARGEST NUMBER
+#!/bin/bash
+echo "Enter three numbers:"
+read a b c
+if [ $a -ge $b ] && [ $a -ge $c ]
+then
+    echo "Largest number is: $a"
+elif [ $b -ge $a ] && [ $b -ge $c ]
+then
+    echo "Largest number is: $b"
+else
+    echo "Largest number is: $c"
+fi
+
+OUTPUT:
+Enter three numbers:
+20 25 35
+Largest number is: 35
+
+

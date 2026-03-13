@@ -1,0 +1,108 @@
+﻿EXPERIMENT 10:
+
+1. #!/bin/bash
+read -p "Enter a year: " year
+if (( year % 400 == 0 || (year % 4 == 0 && year % 100 != 0) ))
+then
+    echo "$year is a leap year"
+else
+    echo "$year is not a leap year"
+fi
+
+OUTPUT:
+
+Enter a year: 2026
+2026 is not a leap year
+Enter a year: 2000
+2000 is a leap year
+
+
+EXPERIMENT 11:
+
+#!/bin/bash
+read -p "Enter a number: " num
+
+if (( num % 2 == 0 ))
+then
+    echo "$num is Even"
+else
+    echo "$num is Odd"
+fi
+
+OUTPUT:
+Enter a number: 18
+18 is Even
+Enter a number: 13
+13 is Odd
+
+EXPERIMENT 12:
+
+#!/bin/bash
+
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+read -p "Enter third number: " c
+
+if (( a >= b && a >= c ))
+then
+    echo "$a is the largest number"
+elif (( b >= a && b >= c ))
+then
+    echo "$b is the largest number"
+else
+    echo "$c is the largest number"
+fi
+
+OUTPUT:
+
+Enter first number: 123
+Enter second number: 100
+Enter third number: 256
+256 is the largest number
+
+EXPERIMENT 14:
+
+#!/bin/bash
+read -p "Enter a number: " n
+fact=1
+for (( i=1; i<=n; i++ ))
+do
+    fact=$((fact * i))
+done
+echo "Factorial of $n is $fact"
+
+OUTPUT:
+Enter a number: 6
+Factorial of 6 is 720
+
+EXPERIMENT 15:
+
+#!/bin/bash
+
+read -p "Enter number of terms: " n
+a=0
+b=1
+echo "Fibonacci Series:"
+for (( i=1; i<=n; i++ ))
+do
+    echo -n "$a "
+    temp=$((a + b))
+    a=$b
+    b=$temp
+done
+echo
+
+OUTPUT:
+
+Enter number of terms: 4
+Fibonacci Series:
+0 1 1 2 
+
+
+
+
+
+
+
+
+

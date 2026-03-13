@@ -1,0 +1,145 @@
+﻿EG 1: 
+       #!/bin/bash
+        echo "Welcome to Linux Shell Scripting"
+
+OUTPUT:
+     mca@MCA10:~/Desktop/sneha/network$ chmod +x file1.sh
+mca@MCA10:~/Desktop/sneha/network$ ./file1.sh
+welcome to linux shell scripting
+
+EG 2: Printing Environment Variables
+    #!/bin/bash
+echo "Home Directory : $HOME"
+echo "Current User   : $USER"
+echo "Current Shell  : $SHELL"
+echo "Working Dir    : $PWD"
+
+OUTPUT: 
+  mca@MCA10:~/Desktop/sneha/network$ chmod +x file1.sh
+mca@MCA10:~/Desktop/sneha/network$ ./file1.sh
+welcome to linux shell scripting
+HOME DIRECTORY : /home/mca
+CURRENT USER :mca
+Current Shell  : /bin/bash
+Working Dir    : /home/mca/Desktop/sneha/network
+
+EG 3:  Creating and Running a Bash Script
+
+#!/bin/bash
+str="sneha"
+echo "Hello $str"
+
+OUTPUT:
+  mca@MCA10:~/Desktop/sneha/network$ chmod +x file2.sh
+mca@MCA10:~/Desktop/sneha/network$ ./file2.sh
+Hello sneha
+
+EG 4: 
+#!/bin/bash
+a=10
+b=20
+sum=$((a + b))
+echo "Sum of $a and $b is: $sum"
+
+OUTPUT|:
+  sum of 10 and 20 is: 30
+      
+    • If Statement
+
+1. #!/bin/bash
+num=10
+
+if [ $num -gt 0 ]; then
+    echo "$num is a positive number"
+fi
+
+output:
+10 is a positive number
+
+2. if-else statement
+
+#!/bin/bash
+num=3
+if [ $num -gt 5 ]; then
+     echo "Greater than 5"
+else
+      echo "Less than or equal to 5"
+fi
+ output:
+
+Less than or equal to 5
+
+3. if-elif-else statement
+
+#!/bin/bash
+marks=75
+if [ $marks -ge 90 ]
+then
+    echo "Grade: A"
+elif [ $marks -ge 75 ]
+then
+    echo "Grade: B"
+elif [ $marks -ge 50 ]
+then
+    echo "Grade: C"
+else
+    echo "Grade: Fail"
+fi
+
+output:
+ 
+Grade: B
+
+4. for loop
+
+#!/bin/bash
+for i in 1 2 3 4 
+do
+   echo "Number is $i"
+done
+
+output:
+
+Number is 1
+Number is 2
+Number is 3
+Number is 4
+
+4.a) #!/bin/bash
+n=3
+for (( i=1; i<=n; i++ ))
+do
+   echo $i
+done
+
+
+output:
+1
+2
+3
+
+5. #!/bin/bash
+n=5
+for (( i=1; i<=n; i++ ))
+do
+   echo -n "$i "
+done
+output
+1 2 3 4 5
+6.  #!/bin/bash
+i=1
+while [ $i -le 5 ]
+do
+    echo "number is $i"
+(i++)
+done
+
+output;
+ number is 1
+number is 2
+number is 3
+number is 4
+number is 5
+
+7. 
+
